@@ -12,6 +12,7 @@ body {
 button {
   margin: 6px;
   padding: 8px 12px;
+  cursor: pointer;
 }
 
 input {
