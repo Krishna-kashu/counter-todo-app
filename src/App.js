@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [isDark, setIsDark] = useState(true);
+
   // Counter states
   const [count, setCount] = useState(0);
   const [showCounter, setShowCounter] = useState(true);
@@ -22,7 +24,11 @@ function App() {
   };
 
   return (
-    <div className="container">
+      <div className={isDark ? "container dark" : "container light"}>
+        <button onClick={() => setIsDark(!isDark)}>
+          Toggle Theme
+        </button>
+        
       {/* COUNTER APP */}
       <h1>Counter App</h1>
 
